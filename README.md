@@ -1,5 +1,6 @@
 # GraphQL, React & Apollo Demo
 
+- [GraphQl Slides](https://slides.com/joekarlsson/graphql): Slides from the lecture
 - [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
 - [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
 - [Graphcool](https://www.graph.cool): Backend development framework based on GraphQL + Serverless
@@ -9,8 +10,6 @@
 ![Project Demo](https://user-images.githubusercontent.com/4650739/43425273-b07f45d6-9417-11e8-8544-bcb13a717834.gif)
 
 ## Quickstart
-
-> For more information on how to get started refer to the full "React & Apollo"-[tutorial](https://www.graph.cool/docs/quickstart/frontend/react/apollo-tijghei9go/) or watch the corresponding [video](https://www.youtube.com/watch?v=OoPQl8hcIug).
 
 ### 1. Clone example repository
 
