@@ -14,6 +14,13 @@ const detailModalStyle = {
 }
 
 class DetailPage extends React.Component {
+	handleDelete = async () => {
+		await this.props.deletePostMutation({
+			variables: { id: this.props.postQuery.Post.id },
+		})
+		this.props.history.replace('/')
+	}
+
 	render() {
 		if (this.props.postQuery.loading) {
 			return (
@@ -44,6 +51,12 @@ class DetailPage extends React.Component {
 				>
 					Delete
 				</div>
+				<div
+					className='edit ttu white pointer fw6 absolute left-0 top-0 br2'
+					onClick={this.handleEdit}
+				>
+					Edit
+				</div>
 				<div className='bg-white detail flex flex-column no-underline br2 h-100'>
 					<div
 						className='image'
@@ -60,13 +73,6 @@ class DetailPage extends React.Component {
 				</div>
 			</Modal>
 		)
-	}
-
-	handleDelete = async () => {
-		await this.props.deletePostMutation({
-			variables: { id: this.props.postQuery.Post.id },
-		})
-		this.props.history.replace('/')
 	}
 }
 

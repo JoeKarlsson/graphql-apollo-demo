@@ -34,6 +34,7 @@
 		"test": "react-scripts test --env=jsdom",
 		"eject": "react-scripts eject",
 		"prettier": "prettier-eslint --write \"src/**/*.+(js|jsx)\"",
-		"prettier-dry-run": "prettier-eslint \"src/**/*.+(js|jsx)\" -l debug"
+		"prettier-dry-run": "prettier-eslint \"src/**/*.+(js|jsx)\" -l debug",
+		"copy": "highlight -O rtf test.js --style molokai | pbcopy"
 	}
 }
