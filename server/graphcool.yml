@@ -18,14 +18,6 @@
 types: ./types.graphql
 
 
-functions:
-  hello:
-    handler:
-      code: src/hello.js
-    type: resolver
-    schema: src/hello.graphql
-
-
 # Model/Relation permissions are used to limit the API access
 # To take the burden of thinking about those while development, we
 # preconfigured the wildcard ("*") permission that allows everything
@@ -33,6 +25,10 @@ functions:
 # https://www.graph.cool/docs/reference/auth/authorization/overview-iegoo0heez
 permissions:
   - operation: "*"
+  - operation: Post.read
+  - operation: Post.create
+  - operation: Post.update
+  - operation: Post.delete
 
 
 # Your root tokens used for functions to get full access to the API
@@ -40,4 +36,3 @@ permissions:
 # https://www.graph.cool/docs/reference/auth/authentication/authentication-tokens-eip7ahqu5o
 # rootTokens:
 #   - mytoken
-
