@@ -10,8 +10,6 @@ class ListPage extends React.Component {
   }
 
   render() {
-    console.log(this.props.data)
-
     let blurClass = ''
     if (this.props.location.pathname !== '/') {
       blurClass = ' blur'

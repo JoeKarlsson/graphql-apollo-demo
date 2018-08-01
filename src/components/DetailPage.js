@@ -1,9 +1,7 @@
-import React from 'react'
-import { graphql, compose } from 'react-apollo'
+import React, { Component } from 'react'
 import Modal from 'react-modal'
 import modalStyle from '../constants/modalStyle'
 import { withRouter } from 'react-router-dom'
-import gql from 'graphql-tag'
 
 const detailModalStyle = {
   overlay: modalStyle.overlay,
@@ -13,21 +11,21 @@ const detailModalStyle = {
   }
 }
 
-class DetailPage extends React.Component {
-  render() {
-    if (this.props.postQuery.loading) {
-      return (
-        <div className='flex w-100 h-100 items-center justify-center pt7'>
-          <div>Loading (from {process.env.REACT_APP_GRAPHQL_ENDPOINT})</div>
-        </div>
-      )
-    }
+class DetailPage extends Component {
+  handleDelete = async () => {
+    await this.props.deletePost({
+      variables: { id: this.props.Post.id }
+    })
+    this.props.history.replace('/')
+  }
 
-    const { Post } = this.props.postQuery
+  render() {
+    const { Post } = this.props
 
     return (
       <Modal
         isOpen
+        ariaHideApp={false}
         contentLabel='Create Post'
         style={detailModalStyle}
         onRequestClose={this.props.history.goBack}
@@ -61,51 +59,6 @@ class DetailPage extends React.Component {
       </Modal>
     )
   }
-
-  handleDelete = async () => {
-    await this.props.deletePostMutation({
-      variables: { id: this.props.postQuery.Post.id }
-    })
-    this.props.history.replace('/')
-  }
 }
 
-const DELETE_POST_MUTATION = gql`
-  mutation DeletePostMutation($id: ID!) {
-    deletePost(id: $id) {
-      id
-    }
-  }
-`
-
-const POST_QUERY = gql`
-  query PostQuery($id: ID!) {
-    Post(id: $id) {
-      id
-      imageUrl
-      description
-    }
-  }
-`
-
-const DetailPageWithGraphQL = compose(
-  graphql(POST_QUERY, {
-    name: 'postQuery',
-    // see documentation on computing query variables from props in wrapper
-    // http://dev.apollodata.com/react/queries.html#options-from-props
-    options: ({ match }) => ({
-      variables: {
-        id: match.params.id
-      }
-    })
-  }),
-  graphql(DELETE_POST_MUTATION, {
-    name: 'deletePostMutation'
-  })
-)(DetailPage)
-
-const DetailPageWithDelete = graphql(DELETE_POST_MUTATION)(
-  DetailPageWithGraphQL
-)
-
-export default withRouter(DetailPageWithDelete)
+export default withRouter(DetailPage)
