@@ -8,7 +8,7 @@ const CreatePageContainer = props => (
   <Query query={ALL_POSTS_QUERY}>
     {({ loading, error, data }) => {
       if (loading) return <Loading />
-      if (error) return <p>Error :(</p>
+      if (error) return <p>`Error! ${error.message}`</p>
 
       return (
         <Mutation mutation={CREATE_POST_MUTATION}>

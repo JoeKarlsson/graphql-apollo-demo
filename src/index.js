@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import ListPage from './components/ListPageContainer'
 import CreatePage from './components/CreatePageContainer'
-import EditPage from './components/EditPage'
 import DetailPage from './components/DetailPageContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { ApolloProvider } from 'react-apollo'
@@ -29,7 +28,6 @@ ReactDOM.render(
         <Route exact path='/' component={ListPage} />
         <Route path='/create' component={CreatePage} />
         <Route path='/post/:id' component={DetailPage} />
-        <Route path='/post/edit/:id' component={EditPage} />
       </div>
     </Router>
   </ApolloProvider>,
