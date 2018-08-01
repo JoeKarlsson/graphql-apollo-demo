@@ -1,22 +1,21 @@
-# React & Apollo Quickstart
+# GraphQL, React & Apollo Demo
 
-* [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
-* [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
-* [Graphcool](https://www.graph.cool): Backend development framework based on GraphQL + Serverless
+- [GraphQl Slides](https://slides.com/joekarlsson/graphql): Slides from the lecture
+- [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
+- [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
+- [Graphcool](https://www.graph.cool): Backend development framework based on GraphQL + Serverless
 
 ## Example
 
-![](http://imgur.com/3S6fUeI.gif)
+![Project Demo](https://user-images.githubusercontent.com/4650739/43425273-b07f45d6-9417-11e8-8544-bcb13a717834.gif)
 
 ## Quickstart
-
-> For more information on how to get started refer to the full "React & Apollo"-[tutorial](https://www.graph.cool/docs/quickstart/frontend/react/apollo-tijghei9go/) or watch the corresponding [video](https://www.youtube.com/watch?v=OoPQl8hcIug).
 
 ### 1. Clone example repository
 
 ```sh
-git clone https://github.com/graphcool-examples/react-graphql.git
-cd react-graphql/quickstart-with-apollo
+git clone https://github.com/JoeKarlsson/graphql-apollo-demo.git
+cd graphql-apollo-demo
 ```
 
 ### 2. Create Graphcool service with the [Graphcool CLI](https://docs-next.graph.cool/reference/graphcool-cli/overview-zboghez5go)
@@ -49,15 +48,13 @@ Replace the current contents in `types.graphql` with the following type definiti
 
 ```graphql
 type Post @model {
-  # Required system field
-  id: ID! @isUnique # read-only (managed by Graphcool)
-
-  # Optional system fields (remove if not needed)
-  createdAt: DateTime! # read-only (managed by Graphcool)
-  updatedAt: DateTime! # read-only (managed by Graphcool)
-
-  description: String!
-  imageUrl: String!
+	# Required system field
+	id: ID! @isUnique # read-only (managed by Graphcool)
+	# Optional system fields (remove if not needed)
+	createdAt: DateTime! # read-only (managed by Graphcool)
+	updatedAt: DateTime! # read-only (managed by Graphcool)
+	description: String!
+	imageUrl: String!
 }
 ```
 
@@ -91,22 +88,31 @@ const httpLink = new HttpLink({ uri: '__SIMPLE_API_ENDPOINT__' })
 
 ```sh
 cd ..
-yarn install
-yarn start # open http://localhost:3000 in your browser
+npm install
+npm start # open http://localhost:3000 in your browser
 ```
 
 ## Next steps
 
-* [Documentation](https://www.graph.cool/docs)
-* [Advanced GraphQL features](https://www.graph.cool/docs/tutorials/advanced-features-eath7duf7d/)
-* [Authentication & Permissions](https://www.graph.cool/docs/reference/authorization/overview-iegoo0heez/)
-* [Implementing business logic with serverless functions](https://www.graph.cool/docs/reference/functions/overview-boo6uteemo/)
+- [Documentation](https://www.graph.cool/docs)
+- [Advanced GraphQL features](https://www.graph.cool/docs/tutorials/advanced-features-eath7duf7d/)
+- [Implementing business logic with serverless functions](https://www.graph.cool/docs/reference/functions/overview-boo6uteemo/)
 
+### Maintainers
 
-## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img width="150 height="150"
+        src="https://avatars.githubusercontent.com/JoeKarlsson?v=3">
+        <br />
+        <a href="https://github.com/JoeKarlsson">Joe Karlsson</a>
+      </td>
+    <tr>
+  <tbody>
+</table>
 
-Say hello in our [Slack](http://slack.graph.cool/) or visit the [Graphcool Forum](https://www.graph.cool/forum) if you run into issues or have questions. We love talking to you!
+### License
 
-![](http://i.imgur.com/5RHR6Ku.png)
-
-
+#### [MIT](./LICENSE)
