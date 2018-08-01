@@ -14,24 +14,24 @@ import './index.css'
 
 // __SIMPLE_API_ENDPOINT__ looks like: 'https://api.graph.cool/simple/v1/__SERVICE_ID__'
 const httpLink = new HttpLink({
-	uri: 'https://api.graph.cool/simple/v1/cjk6wcces1yvs0129lcwn94v7',
+  uri: 'https://api.graph.cool/simple/v1/cjk6wcces1yvs0129lcwn94v7'
 })
 
 const client = new ApolloClient({
-	link: httpLink,
-	cache: new InMemoryCache(),
+  link: httpLink,
+  cache: new InMemoryCache()
 })
 
 ReactDOM.render(
-	<ApolloProvider client={client}>
-		<Router>
-			<div>
-				<Route exact path='/' component={ListPage} />
-				<Route path='/create' component={CreatePage} />
-				<Route path='/post/:id' component={DetailPage} />
-				<Route path='/post/edit/:id' component={EditPage} />
-			</div>
-		</Router>
-	</ApolloProvider>,
-	document.getElementById('root'),
+  <ApolloProvider client={client}>
+    <Router>
+      <div>
+        <Route exact path='/' component={ListPage} />
+        <Route path='/create' component={CreatePage} />
+        <Route path='/post/:id' component={DetailPage} />
+        <Route path='/post/edit/:id' component={EditPage} />
+      </div>
+    </Router>
+  </ApolloProvider>,
+  document.getElementById('root')
 )
