@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ListPage from './components/ListPage'
+import ListPageContainer from './components/ListPageContainer'
 import CreatePage from './components/CreatePage'
 import EditPage from './components/EditPage'
 import DetailPage from './components/DetailPage'
@@ -26,7 +26,7 @@ ReactDOM.render(
   <ApolloProvider client={client}>
     <Router>
       <div>
-        <Route exact path='/' component={ListPage} />
+        <Route exact path='/' component={ListPageContainer} />
         <Route path='/create' component={CreatePage} />
         <Route path='/post/:id' component={DetailPage} />
         <Route path='/post/edit/:id' component={EditPage} />
