@@ -4,10 +4,11 @@
 - [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
 - [Apollo Client](https://github.com/apollographql/apollo-client): Fully-featured, production ready caching GraphQL client
 - [Graphcool](https://www.graph.cool): Backend development framework based on GraphQL + Serverless
+- [GraphQl Slides](https://speakerdeck.com/joekarlsson/building-a-graphql-client-in-javascript): Slides that accompany this demo
 
 ## Example
 
-![Project Demo](https://user-images.githubusercontent.com/4650739/43425273-b07f45d6-9417-11e8-8544-bcb13a717834.gif)
+![Project Demo](https://user-images.githubusercontent.com/4650739/43920725-565a810e-9bdf-11e8-90b8-99a451cd2254.png)
 
 ## Quickstart
 
