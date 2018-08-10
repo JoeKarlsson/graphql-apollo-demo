@@ -8,7 +8,7 @@
 
 ## Example
 
-![Project Demo](https://user-images.githubusercontent.com/4650739/43920725-565a810e-9bdf-11e8-90b8-99a451cd2254.png)
+![app-demo](https://user-images.githubusercontent.com/4650739/43966780-69b00ab8-9c88-11e8-9fed-81122c27cb0d.gif)
 
 ## Quickstart
 
