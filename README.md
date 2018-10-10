@@ -8,7 +8,7 @@
 
 ## Example
 
-![app-demo](https://user-images.githubusercontent.com/4650739/43966780-69b00ab8-9c88-11e8-9fed-81122c27cb0d.gif)
+![graphql-demo](https://user-images.githubusercontent.com/4650739/46759321-bcd37180-cc94-11e8-974e-b8d464a39b67.gif)
 
 ## Quickstart
 
