@@ -1,8 +1,7 @@
 import React from 'react';
 import { Mutation } from 'react-apollo';
-import { CREATE_POST_MUTATION, ALL_POSTS_QUERY } from './graphql';
+import { CREATE_POST_MUTATION } from './graphql';
 import CreatePage from './CreatePage';
-import Loading from './Loading';
 
 const CreatePageContainer = props => (
 	<Mutation mutation={CREATE_POST_MUTATION}>
