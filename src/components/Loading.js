@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const Loading = () => {
-  return (
-    <div className='flex w-100 h-100 items-center justify-center pt7'>
-      <div>Loading GraphQL endpoint...</div>
-    </div>
-  )
-}
+	return (
+		<div className="flex w-100 h-100 items-center justify-center pt7">
+			<div>Loading GraphQL endpoint...</div>
+		</div>
+	);
+};
 
-export default Loading
+export default Loading;

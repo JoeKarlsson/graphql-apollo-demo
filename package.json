@@ -1,44 +1,47 @@
 {
-	"name": "graphql-apollo-react-demo",
-	"description": "GraphQL is the future of API. It's powerful enough to describe all of Facebook, yet simple enough to be easy to learn and use by its product developers. If you have ever worked with an API, you have probably bumped into the limitations of REST.",
-	"version": "0.0.1",
-	"keywords": [
-		"React",
-		"graphql",
-		"Apollo"
-	],
-	"author": "Joe Karlsson",
-	"homepage": "https://joekarlsson.github.io/graphql-apollo-demo/",
-	"license": "MIT",
-	"private": true,
-	"devDependencies": {
-		"gh-pages": "^1.2.0",
-		"prettier-eslint-cli": "^4.4.0",
-		"react-scripts": "^1.0.16"
-	},
-	"dependencies": {
-		"apollo-cache-inmemory": "1.0.0",
-		"apollo-client": "2.0.1",
-		"apollo-link": "1.0.0",
-		"apollo-link-http": "1.1.0",
-		"graphql": "0.11.7",
-		"graphql-tag": "2.5.0",
-		"react": "16.0.0",
-		"react-apollo": "2.3.3",
-		"react-dom": "16.0.0",
-		"react-modal": "3.1.0",
-		"react-router-dom": "4.2.2",
-		"tachyons": "4.9.0"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject",
-		"prettier": "prettier-eslint --write \"src/**/*.+(js|jsx)\"",
-		"prettier-dry-run": "prettier-eslint \"src/**/*.+(js|jsx)\" -l debug",
-		"copy": "highlight -O rtf test.js --style molokai | pbcopy",
-		"deploy": "npm run build && gh-pages -d build",
-		"ghpages": "gh-pages -d build"
-	}
+  "name": "graphql-apollo-react-demo",
+  "description": "GraphQL is the future of API. It's powerful enough to describe all of Facebook, yet simple enough to be easy to learn and use by its product developers. If you have ever worked with an API, you have probably bumped into the limitations of REST.",
+  "version": "0.0.1",
+  "keywords": [
+    "React",
+    "graphql",
+    "Apollo"
+  ],
+  "author": "Joe Karlsson",
+  "homepage": "https://joekarlsson.github.io/graphql-apollo-demo/",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "react-scripts": "^2.1.2"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": "1.3.12",
+    "apollo-client": "2.4.8",
+    "apollo-link": "1.2.6",
+    "apollo-link-http": "1.5.9",
+    "graphql": "14.0.2",
+    "graphql-tag": "2.10.0",
+    "react": "16.7.0",
+    "react-apollo": "^2.3.3",
+    "react-dom": "16.7.0",
+    "react-modal": "3.8.1",
+    "react-router-dom": "4.3.1",
+    "tachyons": "4.11.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "copy": "highlight -O rtf test.js --style molokai | pbcopy",
+    "deploy": "npm run build && gh-pages -d build",
+    "ghpages": "gh-pages -d build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
