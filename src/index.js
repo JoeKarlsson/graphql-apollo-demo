@@ -28,14 +28,16 @@ const client = new ApolloClient({
 ReactDOM.render(
 	<ApolloProvider client={client}>
 		<ErrorBoundary>
-			<div className="flex flex-column min-vh-100">
+			<div className="flex flex-column min-vh-100 athelas">
 				<Router>
 					<div>
 						<Header />
-						<Banner />
-						<Route exact path="/" component={ListPage} />
-						<Route path="/create" component={CreatePage} />
-						<Route path="/post/:id" component={DetailPage} />
+						<div className="w-100 pr6 pl6">
+							<Banner />
+							<Route exact path="/" component={ListPage} />
+							<Route path="/create" component={CreatePage} />
+							<Route path="/post/:id" component={DetailPage} />
+						</div>
 					</div>
 				</Router>
 				<Footer />

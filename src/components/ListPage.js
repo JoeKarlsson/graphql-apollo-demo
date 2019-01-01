@@ -15,7 +15,7 @@ class ListPage extends Component {
 		}
 
 		return (
-			<div className={'w-100 pa6' + blurClass}>
+			<div className={blurClass}>
 				<div className="w-100" style={{ maxWidth: 1150 }}>
 					{this.props.allPosts &&
 						this.props.allPosts.map(post => (

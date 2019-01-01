@@ -23,15 +23,9 @@ class DetailPage extends Component {
 		const { Post } = this.props;
 
 		return (
-			<Modal
-				isOpen
-				ariaHideApp={false}
-				contentLabel="Create Post"
-				style={detailModalStyle}
-				onRequestClose={this.props.history.goBack}
-			>
+			<article className="pa3 pa5-ns">
 				<div
-					className="close fixed right-0 top-0 pointer"
+					className="close ttu fw6 absolute right-0 top-0 br"
 					onClick={this.props.history.goBack}
 				>
 					<img src={require('../assets/close.svg')} alt="" />
@@ -42,21 +36,14 @@ class DetailPage extends Component {
 				>
 					Delete
 				</div>
-				<div className="bg-white detail flex flex-column no-underline br2 h-100">
-					<div
-						className="image"
-						style={{
-							backgroundImage: `url(${Post.imageUrl})`,
-							backgroundSize: 'cover',
-							backgroundPosition: 'center',
-							paddingBottom: '100%',
-						}}
-					/>
-					<div className="flex items-center black-80 fw3 description">
-						{Post.description}
-					</div>
-				</div>
-			</Modal>
+				<h1 className="f2">Title Text with Image</h1>
+				<img
+					src={Post.imageUrl}
+					className="w-100 f5 measure"
+					alt="Photo of outer space"
+				/>
+				<p className="measure lh-copy">{Post.description}</p>
+			</article>
 		);
 	}
 }

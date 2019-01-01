@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
 	return (
-		<div className="tc-l mt3 ph3">
+		<div className="tc-l mt3 pb3">
 			<h2 className="f3 lh-title">
 				This is a blog built using GraphQL, React and Apollo.
 			</h2>
