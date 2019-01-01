@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Post from '../components/Post';
-import NewPostButton from '../components/NewPostButton';
 
 class ListPage extends Component {
 	componentWillReceiveProps(nextProps) {
@@ -16,9 +15,8 @@ class ListPage extends Component {
 		}
 
 		return (
-			<div className={'w-100 flex justify-center pa6' + blurClass}>
-				<div className="w-100 flex flex-wrap" style={{ maxWidth: 1150 }}>
-					<NewPostButton />
+			<div className={'w-100 pa6' + blurClass}>
+				<div className="w-100" style={{ maxWidth: 1150 }}>
 					{this.props.allPosts &&
 						this.props.allPosts.map(post => (
 							<Post

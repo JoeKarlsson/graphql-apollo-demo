@@ -3,12 +3,10 @@ import { Link } from 'react-router-dom';
 
 const NewPostButton = () => {
 	return (
-		<Link
-			to="/create"
-			className="ma3 box new-post br2 flex flex-column items-center justify-center ttu fw6 f20 black-30 no-underline"
-		>
-			<img src={require('../assets/plus.svg')} alt="" className="plus mb3" />
-			<div>New Post</div>
+		<Link to="/create">
+			<a class="f6 link dim ba ph3 pv2 mb2 dib near-black" href="#0">
+				New Post
+			</a>
 		</Link>
 	);
 };

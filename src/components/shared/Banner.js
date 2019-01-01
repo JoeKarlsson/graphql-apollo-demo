@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
 	return (
-		<div className="bg-black-80 pb3 pt20">
-			<div className="tc-l mt2 ph3">
-				<h1 className="f2 f1-l fw2 white-90 lh-title ta-center">
-					This is a blog built using GraphQL, React and Apollo.
-				</h1>
-				<h2 className="fw1 f3 white-80 mt3 mb1">
-					You can check out more at joekarlsson.com
-				</h2>
-			</div>
+		<div className="tc-l mt3 ph3">
+			<h2 className="f3 lh-title">
+				This is a blog built using GraphQL, React and Apollo.
+			</h2>
+			<time className="f6 ttu tracked">
+				You can check out more at joekarlsson.com
+			</time>
+			<br />
+			<br />
+			<Link
+				to="/create"
+				className="f6 no-underline grow dib v-mid near-black ba b--white ph3 pv2 mb3"
+			>
+				New Post
+			</Link>
 		</div>
 	);
 };

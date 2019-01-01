@@ -29,17 +29,15 @@ ReactDOM.render(
 	<ApolloProvider client={client}>
 		<ErrorBoundary>
 			<div className="flex flex-column min-vh-100">
-				<Header />
-				<Banner />
-				<div className="min-vh-100">
-					<Router>
-						<div>
-							<Route exact path="/" component={ListPage} />
-							<Route path="/create" component={CreatePage} />
-							<Route path="/post/:id" component={DetailPage} />
-						</div>
-					</Router>
-				</div>
+				<Router>
+					<div>
+						<Header />
+						<Banner />
+						<Route exact path="/" component={ListPage} />
+						<Route path="/create" component={CreatePage} />
+						<Route path="/post/:id" component={DetailPage} />
+					</div>
+				</Router>
 				<Footer />
 			</div>
 		</ErrorBoundary>
