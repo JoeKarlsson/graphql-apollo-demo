@@ -8,7 +8,7 @@
     "Apollo"
   ],
   "author": "Joe Karlsson",
-  "homepage": "https://joekarlsson.github.io/graphql-apollo-demo/",
+  "homepage": "https://graphqldemo.joekarlsson.com/",
   "license": "MIT",
   "private": true,
   "devDependencies": {
